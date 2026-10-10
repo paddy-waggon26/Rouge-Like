@@ -1,21 +1,23 @@
 public abstract class Card {
-private final String name;
-private final int cost;
-private final String description;
+    private final String name;
+    private final int cost;
+    private final String description;
 
     public Card(String name, int cost, String description) {
     this.name = name;
     this.cost = cost;
     this.description = description;
-}
+    }
 
-public String getName() {
-    return name;
-}
-public int getCost() {
-    return cost;
-}
-public String getDescription() {
-    return description;
-}
+    public String getName() {
+        return name;
+    }
+    public int getCost() {
+        return cost;
+    }
+    public String getDescription() {
+        return description;
+    }
+
+    public abstract void play(Player player, Enemy target);
 }
