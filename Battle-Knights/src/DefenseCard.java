@@ -5,8 +5,13 @@ class DefenseCard extends Card {
         super(name, cost, description);
         this.defense = defense;
     }
-
     public int getDefence(){
         return defense;
+    }
+
+
+    @Override
+    public void play(Player player, Enemy target) {
+        player.blocked(defense);
     }
 }

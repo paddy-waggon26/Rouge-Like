@@ -5,8 +5,12 @@ class HealCard extends Card {
         super(name, cost, description);
         this.heal = heal;
     }
-
     public int getHeal() {
         return heal;
+    }
+
+    @Override
+    public void play(Player player, Enemy target) {
+        player.heal(heal);
     }
 }

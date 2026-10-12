@@ -5,8 +5,12 @@ class AttackCard extends Card {
         super(name, cost, description);
         this.damage = damage;
     }
-
     public int getDamage() {
         return damage;
+    }
+
+    @Override
+    public void play(Player player, Enemy target) {
+        target.takeDamage(damage);
     }
 }
